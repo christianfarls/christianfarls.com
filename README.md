@@ -1,2 +1,0 @@
-# christianfarls.com
-My Portfolio :)
