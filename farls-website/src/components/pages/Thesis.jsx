@@ -34,7 +34,7 @@ const Thesis = () => {
                 bias and come to holistic conclusions.
             </Typography>
             <br/>
-            <a href="thesis.pdf" download>Download PDF Here</a>
+            <a href="https://drive.google.com/file/d/1iPiADtP_NKL903N7juZEKFZFQ5VF8ldp/view?usp=sharing" download>View PDF Here</a>
         </Box>
     );
 }
