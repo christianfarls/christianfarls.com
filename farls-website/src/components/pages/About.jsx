@@ -1,11 +1,20 @@
 import React from 'react';
+import {Box, Typography} from "@mui/material";
 
 const About = () => {
     return (
-        <div>
-            <h1>Welcome to My Website</h1>
-            <p>This is the homepage of my website. Feel free to explore!</p>
-        </div>
+        <Box
+            flex={3}
+            p={2}
+            sx={{ height: '800px' }}
+        >
+            <Typography variant="h1" component="h1">
+                About
+            </Typography>
+            <Typography variant="p" component="p">
+                Coming soon...
+            </Typography>
+        </Box>
     );
 }
 

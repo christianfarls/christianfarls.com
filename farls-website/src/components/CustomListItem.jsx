@@ -1,15 +1,20 @@
+import React from 'react';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import { Link } from 'react-router-dom';
-import { ListItem, ListItemButton, ListItemText, ListItemIcon } from "@mui/material";
 
-const CustomListItem = ({ icon, primary, to }) => {
+const CustomListItem = ({ icon, primary, to, external }) => {
+    const ListItemComponent = external ? 'a' : Link;
+
+    const listItemProps = external
+        ? { href: to, target: '_blank', rel: 'noopener noreferrer' }
+        : { to };
+
     return (
-        <ListItem disablePadding>
-            <ListItemButton component={Link} to={to}>
-                <ListItemIcon>
-                    {icon}
-                </ListItemIcon>
-                <ListItemText primary={primary} />
-            </ListItemButton>
+        <ListItem button component={ListItemComponent} {...listItemProps}>
+            <ListItemIcon>{icon}</ListItemIcon>
+            <ListItemText primary={primary} />
         </ListItem>
     );
 };

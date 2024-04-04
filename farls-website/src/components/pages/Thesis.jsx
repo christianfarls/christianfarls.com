@@ -7,6 +7,7 @@ const Thesis = () => {
         <Box
             flex={3}
             p={2}
+            sx={{ height: '800px' }}
         >
             <Typography variant="h3" component="h3">
                 The Math and the Matter: An Ethical Examination of Human Reliance on Algorithms

@@ -4,6 +4,7 @@ import {Box, createTheme, Stack, ThemeProvider} from "@mui/material";
 import Navbar from "./components/Navbar";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+import Projects from "./components/pages/Projects";
 import Thesis from "./components/pages/Thesis";
 import Info from "./components/pages/Info";
 import NotFound from "./components/pages/NotFound";
@@ -29,6 +30,7 @@ function App() {
                         <Routes>
                             <Route exact path="/" element={<Home/>}/>
                             <Route path="/about" element={<About/>}/>
+                            <Route path="/projects" element={<Projects/>}/>
                             <Route path="/thesis" element={<Thesis/>}/>
                             <Route path="/info" element={<Info/>}/>
                             <Route path="*" element={<NotFound/>}/>

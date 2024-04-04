@@ -13,13 +13,17 @@ const Sidebar = () => {
         <Box
             flex={1} 
             p={2} 
-            sx={{ display: { xs: "none", sm: "block" }, width: "10px" }}
+            sx={{ display: "block", width: "10px"}}
         >
             <List>
                 <CustomListItem icon={<Home />} primary="Home" to="/" />
                 <CustomListItem icon={<EmojiPeopleIcon />} primary="About" to="/about" />
                 <CustomListItem icon={<CodeIcon />} primary="Projects" to="/projects" />
-                <CustomListItem icon={<ContactPageIcon />} primary="CV" to="/cv" />
+                <CustomListItem icon={<ContactPageIcon />} 
+                                primary="CV"
+                                to="https://drive.google.com/file/d/1zbGK-uTAZGcEXcbVn68IcqZNyeBzOD7U/view?usp=sharing"
+                                target="_blank"
+                                external={true}/>
                 <CustomListItem icon={<Book />} primary="Thesis" to="/thesis" />
                 <CustomListItem icon={<InfoIcon />} primary="Info" to="/info" />
             </List>

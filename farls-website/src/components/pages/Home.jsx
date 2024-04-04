@@ -6,8 +6,9 @@ const Home = () => {
         <Box
             flex={3}
             p={2}
+            sx={{ height: '800px' }}
         >
-            <Typography variant="h1" component="h1" align="center">
+            <Typography variant="h1" component="h1">
                 Welcome!
             </Typography>
             <Typography 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {AppBar, Box, Switch, styled, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, styled, Toolbar, Typography} from "@mui/material";
 import {LinkedIn, Github, Contact} from "../icons/Icons"
 import ModeSwitch from "./ModeSwitch";
 
