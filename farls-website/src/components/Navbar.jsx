@@ -1,19 +1,13 @@
 import React from 'react';
 import {AppBar, Box, Switch, styled, Toolbar, Typography} from "@mui/material";
 import {LinkedIn, Github, Contact} from "../icons/Icons"
+import ModeSwitch from "./ModeSwitch";
 
 const StyledToolbar = styled(Toolbar)({
     display:"flex",
     justifyContent:"space-between",
     alignItems:"center",
 });
-
-const Search = styled("div")(({ theme }) => ({
-    backgroundColor: "white",
-    padding:"0 10px",
-    borderRadius: theme.shape.borderRadius,
-    width: "40%",
-}));
 
 const Icons = styled(Box)(({ theme }) => ({ 
     display: "none", 
@@ -33,11 +27,11 @@ const ContactBox = styled(Box)(({ theme }) => ({
     }
 }));
 
-const Navbar = () => {
+const Navbar = ({mode, setMode}) => {
     return (
         <AppBar position="sticky">
             <StyledToolbar>
-                <Switch />
+                <ModeSwitch setMode={setMode} mode={mode}/>
                 <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>christianfarls.com</Typography>
                 <Typography variant="h5" align="center" sx={{display:{xs:"block", sm:"none"}}}>cf</Typography>
                 <Icons>

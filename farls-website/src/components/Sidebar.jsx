@@ -16,7 +16,7 @@ const Sidebar = () => {
             sx={{ display: { xs: "none", sm: "block" }, width: "10px" }}
         >
             <List>
-                <CustomListItem icon={<Home />} primary="Homepage" to="/" />
+                <CustomListItem icon={<Home />} primary="Home" to="/" />
                 <CustomListItem icon={<EmojiPeopleIcon />} primary="About" to="/about" />
                 <CustomListItem icon={<CodeIcon />} primary="Projects" to="/projects" />
                 <CustomListItem icon={<ContactPageIcon />} primary="CV" to="/cv" />
