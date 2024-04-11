@@ -2,6 +2,7 @@ import React from 'react';
 import {AppBar, Box, styled, Toolbar, Typography} from "@mui/material";
 import {LinkedIn, Github, Contact} from "../icons/Icons"
 import Navigation from './Navigation.jsx';
+import './Navbar.css';
 
 const StyledToolbar = styled(Toolbar)({
     display:"flex",
@@ -30,8 +31,8 @@ const ContactBox = styled(Box)(({ theme }) => ({
 const Navbar = () => {
     return (
         <AppBar position="sticky">
-            <StyledToolbar>
-                <Typography variant="h5" align="center" sx={{xs:"block"}}>cf</Typography>
+            <StyledToolbar className="navbar">
+                <Typography variant="h5" align="center" >cf</Typography>
                 <Navigation />
                 <Icons>
                     <LinkedIn/>
