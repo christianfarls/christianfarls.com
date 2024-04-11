@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 
-const Info = () => {
+const Contact = () => {
     return (
         <Box
             flex={3}
@@ -18,4 +18,4 @@ const Info = () => {
     );
 }
 
-export default Info;
+export default Contact;

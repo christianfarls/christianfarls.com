@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppBar, Box, styled, Toolbar, Typography} from "@mui/material";
 import {LinkedIn, Github, Contact} from "../icons/Icons"
-import ModeSwitch from "./ModeSwitch";
+import Navigation from './Navigation.jsx';
 
 const StyledToolbar = styled(Toolbar)({
     display:"flex",
@@ -27,13 +27,12 @@ const ContactBox = styled(Box)(({ theme }) => ({
     }
 }));
 
-const Navbar = ({mode, setMode}) => {
+const Navbar = () => {
     return (
         <AppBar position="sticky">
             <StyledToolbar>
-                <ModeSwitch setMode={setMode} mode={mode}/>
-                <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>christianfarls.com</Typography>
-                <Typography variant="h5" align="center" sx={{display:{xs:"block", sm:"none"}}}>cf</Typography>
+                <Typography variant="h5" align="center" sx={{xs:"block"}}>cf</Typography>
+                <Navigation />
                 <Icons>
                     <LinkedIn/>
                     <Github/>
