@@ -1,5 +1,33 @@
-.navbar {
-    color: black;
-    background-color: beige;
-    position: fixed;
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #4a535c;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.icons-container {
+    display: none;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .icons-container {
+        display: flex;
+    }
+}
+
+.contact-box {
+    display: flex;
+    align-items: center; /* Adjust alignment to center */
+    gap: 10px;
+}
+
+@media (min-width: 600px) {
+    .contact-box {
+        display: none;
+    }
 }

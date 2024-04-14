@@ -1,50 +1,26 @@
 import React from 'react';
-import {AppBar, Box, styled, Toolbar, Typography} from "@mui/material";
-import {LinkedIn, Github, Contact} from "../icons/Icons"
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import { LinkedIn, Github, Contact } from "../icons/Icons"
 import Navigation from './Navigation.jsx';
 import './Navbar.css';
-
-const StyledToolbar = styled(Toolbar)({
-    display:"flex",
-    justifyContent:"space-between",
-    alignItems:"center",
-});
-
-const Icons = styled(Box)(({ theme }) => ({ 
-    display: "none", 
-    alignItems: "right", 
-    gap: "20px",
-    [theme.breakpoints.up("sm")]:{
-        display: "flex"
-    }
-}));
-
-const ContactBox = styled(Box)(({ theme }) => ({ 
-    display: "flex", 
-    alignItems: "right",
-    gap: "10px",
-    [theme.breakpoints.up("sm")]:{
-        display: "none"
-    }
-}));
 
 const Navbar = () => {
     return (
         <AppBar position="sticky">
-            <StyledToolbar className="navbar">
-                <Typography variant="h5" align="center" >cf</Typography>
+            <Toolbar className="toolbar">
+                <Typography variant="h5" align="center">cf</Typography>
                 <Navigation />
-                <Icons>
-                    <LinkedIn/>
-                    <Github/>
-                    <Contact/>
-                </Icons>
-                <ContactBox>
-                    <Contact/>
-                </ContactBox>
-            </StyledToolbar>
+                <Box className="icons-container">
+                    <LinkedIn />
+                    <Github />
+                    <Contact />
+                </Box>
+                <Box className="contact-box">
+                    <Contact />
+                </Box>
+            </Toolbar>
         </AppBar>
     )
 }
 
-export default Navbar
+export default Navbar;
