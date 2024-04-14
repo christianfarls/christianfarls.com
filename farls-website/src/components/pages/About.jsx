@@ -1,18 +1,18 @@
 import React from 'react';
 import { Box, Typography } from "@mui/material";
-import './About.css';
+import './Page.css';
 
 const About = () => {
     return (
         <div className="about">
-            <Box className="about-box">
+            <Box className="page-box">
                 <Typography variant="h1" component="h1">
-                    Welcome!
+                    About
                 </Typography>
-                <Typography variant="p" component="p">
-                    I'm currently a junior studying Computer Science at the University of Notre Dame.<br/>
-                    As this website is currently under construction, feel free to visit my socials or check out my CV.<br/>
-                    If you have any questions, please email me at cfarls@nd.edu or call +1 (412) 713-5531.
+                <Typography variant="h4" component="p">
+                    I know there isn't much to learn about me right now...currently debugging the site.
+                    <br/>
+                    While I solve my styling issues, please feel free to check out my CV or my socials in the links above.
                 </Typography>
             </Box>
         </div>

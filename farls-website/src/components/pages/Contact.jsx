@@ -1,20 +1,20 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
+import './Page.css'
 
 const Contact = () => {
     return (
-        <Box
-            flex={3}
-            p={2}
-            sx={{ height: '800px' }}
-        >
-            <Typography variant="h1" component="h1">
-                Info
-            </Typography>
-            <Typography variant="p" component="p">
-                Coming soon...
-            </Typography>
-        </Box>
+        <div className="contact">
+            <Box className="page-box">
+                <Typography variant="h1" component="h1">
+                    Contact
+                </Typography>
+                <Typography variant="h4" component="p">
+                    You can find my contact information on the right of the navigation bar.<br/>
+                    Please reach out with any questions!
+                </Typography>
+            </Box>
+        </div>
     );
 }
 

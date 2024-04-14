@@ -1,7 +1,6 @@
 import React from 'react';
 import ParallaxWrapper from './ParallaxWrapper.jsx';
 import photo from "../../static/images/home-photo.jpg";
-import './Home.css';
 
 const Home = () => {
     return (

@@ -1,23 +1,22 @@
-import {createTheme} from "@mui/material";
+import { createTheme } from '@mui/material/styles';
 
-export const theme = createTheme({
-    palette:{
-        primary:{
-            main: "#1760a5",
-            light: "skyblue"
-        },
-        secondary:{
-            main: "#893",
-        },
-        otherColor:{
-            main: "#143"
-        }
-    },
-    typography:{
+const theme = createTheme({
+    typography: {
         fontFamily: 'Poppins',
-        fontWeightLight: '400',
-        fontWeightRegular: '500',
-        fontWeightMedium: '600',
-        fontWeightBold: '700',
-    }
-})
+        variants: {
+            'page-title': {
+                fontWeight: 'bold',
+                fontSize: '30rem',
+                color: '#FFFFFF',
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            },
+            'page-info': {
+                fontSize: '1rem',
+                color: '#FFFFFF',
+                textAlign: 'center',
+            },
+        },
+    },
+});
+
+export default theme;

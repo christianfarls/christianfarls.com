@@ -1,30 +1,32 @@
-import React, { Fragment } from 'react'
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {Box, Stack} from "@mui/material";
-import Navbar from "./components/Navbar";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Projects from "./components/pages/Projects";
-import Thesis from "./components/pages/Thesis";
-import Contact from "./components/pages/Contact";
-import NotFound from "./components/pages/NotFound";
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Box, Stack, ThemeProvider } from '@mui/material';
+import Navbar from './components/Navbar';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Projects from './components/pages/Projects';
+import Thesis from './components/pages/Thesis';
+import Contact from './components/pages/Contact';
+import NotFound from './components/pages/NotFound';
+import theme from './theme'; // Import your custom theme
 import './App.css';
 
 function App() {
     return (
-        <Router>
-            <Navbar className="navbar"/>
-            <Box className="app-box">
-                
-                <Stack className="pages">
+        <ThemeProvider theme={theme}>
+            <Router>
+                <Navbar className="navbar"/>
+                <Box className="app-box">
+                    <Stack className="pages">
                         <Home/>
                         <About/>
                         <Projects/>
                         <Thesis/>
                         <Contact/>
-                </Stack>
-            </Box>
-        </Router>
+                    </Stack>
+                </Box>
+            </Router>
+        </ThemeProvider>
     );
 }
 
