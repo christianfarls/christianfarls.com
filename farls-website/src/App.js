@@ -9,6 +9,7 @@ import Thesis from './components/pages/Thesis';
 import Contact from './components/pages/Contact';
 import NotFound from './components/pages/NotFound';
 import theme from './theme'; // Import your custom theme
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                         <Thesis/>
                         <Contact/>
                     </Stack>
+                    <Analytics />
                 </Box>
             </Router>
         </ThemeProvider>
