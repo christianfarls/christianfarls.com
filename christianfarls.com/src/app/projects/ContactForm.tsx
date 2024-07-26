@@ -67,7 +67,7 @@ export function ContactForm({onSubmit}: { onSubmit: SubmitHandler<FormData> }) {
                         <FormItem>
                             <FormLabel>Message</FormLabel>
                             <FormControl>
-                                <Input as="textarea" placeholder="Message" {...field} />
+                                {/*<Input as="textarea" placeholder="Message" {...field} />*/}
                             </FormControl>
                             <FormMessage/>
                         </FormItem>
