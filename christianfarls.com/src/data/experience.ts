@@ -25,8 +25,8 @@ const PAST_ROLES: {
             'functionality and integration. Collaborated with a scrum team, gaining hands-on experience in agile ' +
             'methodologies, including daily stand-ups, sprint planning, and retrospectives. ' +
             'Enhanced understanding of the full game development lifecycle and agile project management principles.',
-        startDate: 'April 2021',
-        endDate: 'June 2018',
+        startDate: 'June 2022',
+        endDate: 'August 2022',
     },
 ]
 
