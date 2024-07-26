@@ -1,80 +1,98 @@
 import {
-  type IconType,
-  SiAstro,
-  SiBootstrap,
-  SiCss3,
-  SiDocker,
-  SiHtml5,
-  SiJavascript,
-  SiMongodb,
-  SiMysql,
-  SiNextdotjs,
-  SiNginx,
-  SiNodedotjs,
-  SiPostgresql,
-  SiReact,
-  SiRedis,
-  SiRubyonrails,
-  SiSass,
-  SiTailwindcss,
+    type IconType,
+    SiAmazonaws,
+    SiBitbucket,
+    SiBootstrap,
+    SiC,
+    SiCsharp,
+    SiCss3,
+    SiDjango,
+    SiDocker,
+    SiGit,
+    SiHtml5,
+    SiJavascript,
+    SiJira,
+    SiLinux,
+    SiMui,
+    SiMysql,
+    SiNextdotjs,
+    SiNginx,
+    SiNodedotjs,
+    SiPostman,
+    SiPython,
+    SiRabbitmq,
+    SiReact,
+    SiTailwindcss,
+    SiTypescript,
+    SiVim,
 } from '@icons-pack/react-simple-icons'
 
-const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
-  [
-    {
-      field: 'Frontend',
-      skills: [
-        { skill: 'html', icon: SiHtml5 },
-        { skill: 'css', icon: SiCss3 },
-        { skill: 'javascript', icon: SiJavascript },
-        { skill: 'react', icon: SiReact },
-        { skill: 'sass', icon: SiSass },
-        { skill: 'tailwind', icon: SiTailwindcss },
-        { skill: 'nextjs', icon: SiNextdotjs },
-        { skill: 'astro', icon: SiAstro },
-        {
-          skill: 'bootstrap',
-          icon: SiBootstrap,
-        },
-      ],
-    },
-    {
-      field: 'Backend',
-      skills: [
-        {
-          skill: 'nodejs',
-          icon: SiNodedotjs,
-        },
-        {
-          skill: 'ruby on rails',
-          icon: SiRubyonrails,
-        },
-        {
-          skill: 'redis',
-          icon: SiRedis,
-        },
-        {
-          skill: 'postgresql',
-          icon: SiPostgresql,
-        },
-        {
-          skill: 'mongodb',
-          icon: SiMongodb,
-        },
-        {
-          skill: 'mysql',
-          icon: SiMysql,
-        },
-        {
-          skill: 'nginx',
-          icon: SiNginx,
-        },
-        {
-          skill: 'docker',
-          icon: SiDocker,
-        },
-      ],
-    },
-  ]
+export type Tier = {
+    tier: string;
+    backendSkills: { skill: string; icon: IconType }[];
+    frontendSkills: { skill: string; icon: IconType }[];
+}
 
-export default SKILLS
+const TIERS: Tier[] =
+    [
+        {
+            tier: 'goated',
+            backendSkills: [
+                {skill: 'python', icon: SiPython},
+                {skill: 'C', icon: SiC},
+                {skill: 'git', icon: SiGit},
+                {skill: 'bitbucket', icon: SiBitbucket},
+                {skill: 'jira', icon: SiJira},
+            ],
+            frontendSkills: [
+                {skill: 'react', icon: SiReact},
+                {skill: 'typescript', icon: SiTypescript},
+                {skill: 'javascript', icon: SiJavascript},
+                {skill: 'html', icon: SiHtml5},
+                {skill: 'css', icon: SiCss3},
+            ]
+        },
+        {
+            tier: 'been there, done that',
+            backendSkills:
+                [
+                    {skill: 'C#', icon: SiCsharp},
+                    {skill: 'nodejs', icon: SiNodedotjs},
+                    {skill: 'linux', icon: SiLinux},
+                    {skill: 'postman', icon: SiPostman},
+                ],
+            frontendSkills:
+                [
+                    {skill: 'nextjs', icon: SiNextdotjs},
+                    {skill: 'mui', icon: SiMui},
+                ]
+        },
+        {
+            tier: 'mid',
+            backendSkills:
+                [
+                    {skill: 'mysql', icon: SiMysql},
+                    {skill: 'docker', icon: SiDocker},
+                    {skill: 'django', icon: SiDjango},
+                    {skill: 'vim', icon: SiVim},
+                ],
+            frontendSkills:
+                [
+                    {skill: 'tailwind', icon: SiTailwindcss},
+                ]
+        },
+        {
+            tier: 'can carry a convo',
+            backendSkills:
+                [
+                    {skill: 'nginx', icon: SiNginx},
+                    {skill: 'rabbitmq', icon: SiRabbitmq},
+                    {skill: 'aws', icon: SiAmazonaws},
+                ],
+            frontendSkills: [
+                {skill: 'bootstrap', icon: SiBootstrap},
+            ]
+        },
+    ]
+
+export default TIERS

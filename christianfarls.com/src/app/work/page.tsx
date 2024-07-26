@@ -1,57 +1,34 @@
-import PROJECTS from '@/data/projects'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
+import Experience from '@/components/sections/experience'
+import Skills from '@/components/sections/skills'
+import {SiX} from "@icons-pack/react-simple-icons";
 
 export default function Work() {
-  return (
-    <div>
-      <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Work</h1>
 
-      <div className="flex flex-col gap-5">
-        {PROJECTS.map((project, id) => {
-          return (
-            <div
-              className="border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5"
-              key={id}
-            >
-              <AspectRatio
-                className="border-border dark:border-darkBorder shadow-light dark:shadow-dark !-bottom-[2px] rounded-base border-2"
-                ratio={71 / 26}
-              >
-                <img
-                  className="w-full rounded-base"
-                  src={`${project.previewImage}`}
-                  alt={project.name}
-                />
-              </AspectRatio>
+    const link = {icon: SiX, href: 'https://x.com/@christianfarls'};
+    return (
+        <div className="font-base">
+            <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Work</h1>
 
-              <div className="text-text mt-5 font-base">
-                <h2 className="text-xl font-heading sm:text-2xl">
-                  {project.name}
-                </h2>
-
-                <p className="mt-2">{project.description}</p>
-
-                <div className="mt-8 grid grid-cols-2 gap-5">
-                  <a
-                    className="border-border dark:border-darkBorder shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                    href={project.liveLink}
-                    target="_blank"
-                  >
-                    Visit
-                  </a>
-                  <a
-                    className="border-border dark:border-darkBorder shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                    href={project.repoUrl}
-                    target="_blank"
-                  >
-                    Github
-                  </a>
-                </div>
-              </div>
+            <div className="mb-10 text-base sm:text-lg">
+                <p>Through internships, side projects, and tips I'll read between Steelers roster updates
+                    on&nbsp;
+                    <s>twitter</s>
+                    &nbsp;
+                    <a target="_blank"
+                       href={link.href}
+                       style={{display: "inline-block"}}>
+                        <link.icon title=""/>
+                    </a>
+                    , I've strived to learn everything I can about how to build and maintain a system. This only problem
+                    is...that ain't easy. Plus everyone has to be unique. Why can't we all just agree on a framework.
+                </p>
+                <br/>
+                <p>Anyway...here's what I know (and what I don't).</p>
             </div>
-          )
-        })}
-      </div>
-    </div>
-  )
+
+            <Skills/>
+            <Experience/>
+
+        </div>
+    )
 }

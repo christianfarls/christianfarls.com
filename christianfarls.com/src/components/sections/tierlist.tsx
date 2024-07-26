@@ -1,57 +1,72 @@
-import {Table, TableBody, TableCell, TableRow} from '@/components/ui/table';
-
-const tiers = [
-    {
-        title: 'Goated',
-        skills: ['Paid', 'there'],
-    },
-    {
-        title: 'Been there, done that',
-        skills: ['Paid', 'there'],
-    },
-    {
-        title: 'Mid',
-        skills: ['Paid', 'there'],
-    },
-    {
-        title: 'Can carry a convo',
-        skills: ['Paid', 'there'],
-    },
-];
+import {Table, TableBody, TableCaption, TableCell, TableRow} from '@/components/ui/table';
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import TIERS from "@/data/skills";
 
 export default function TierList() {
 
     // Get the tier color given the title
     function getBackgroundColor(title: string) {
         switch (title) {
-            case 'Goated':
+            case 'goated':
                 return 'bg-red-500';
-            case 'Been there, done that':
-                return 'bg-orange-500 text-xs';
-            case 'Mid':
+            case 'been there, done that':
+                return 'bg-orange-500';
+            case 'mid':
                 return 'bg-green-500';
-            case 'Can carry a convo':
+            case 'can carry a convo':
                 return 'bg-blue-500';
             default:
                 return 'bg-gray-500';
         }
     }
 
+    const tiers = TIERS;
+
     return (
         <Table>
             <TableBody>
                 {tiers.map((tier) => (
-                    <TableRow key={tier.title}>
+                    <TableRow key={tier.tier}>
                         <TableCell
-                            className={`border-2 border-black ${getBackgroundColor(tier.title)} text-center`}>
-                            {tier.title}
+                            className={`border-2 border-black ${getBackgroundColor(tier.tier)} text-center w-1/4 text-xs`}>
+                            {tier.tier}
                         </TableCell>
-                        <TableCell className="w-full flex-grow border-2 border-black dark:bg-gray-600 bg-gray-100">
-                            {tier.skills.join(' ')}
+                        <TableCell className="flex-grow border-2 border-black dark:bg-gray-300 bg-gray-400">
+                            <div className="flex flex-wrap gap-5">
+                                {tier.frontendSkills.map((skill, id) => {
+                                    return (
+                                        <TooltipProvider key={id}>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <skill.icon className="h-8 w-8" title=""/>
+                                                </TooltipTrigger>
+                                                <TooltipContent>{skill.skill}</TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    )
+                                })}
+                            </div>
+                        </TableCell>
+                        <TableCell className="flex-grow border-2 border-black dark:bg-gray-300 bg-gray-400">
+                            <div className="flex flex-wrap gap-5">
+                                {tier.backendSkills.map((skill, id) => {
+                                    return (
+                                        <TooltipProvider key={id}>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <skill.icon className="h-8 w-8" title=""/>
+                                                </TooltipTrigger>
+                                                <TooltipContent>{skill.skill}</TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    )
+                                })}
+                            </div>
                         </TableCell>
                     </TableRow>
                 ))}
             </TableBody>
+            <TableCaption>*tier indicates proficiency level</TableCaption>
         </Table>
     )
 }
