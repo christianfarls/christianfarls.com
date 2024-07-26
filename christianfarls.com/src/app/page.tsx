@@ -9,11 +9,9 @@ export default function Home() {
             <p className="mt-2 text-lg sm:text-3xl">Software Engineer</p>
             <div className="mt-8 text-base sm:text-lg">
                 <p>
-                    Welcome to my site! I'm a senior at the University of Notre Dame studying computer science.
-
+                    Welcome to my site! I'm a senior at the University of Notre Dame studying computer science. Feel
+                    free to check out the other tabs until my landing page is finished.
                 </p>
-
-
                 <br/>
             </div>
 
