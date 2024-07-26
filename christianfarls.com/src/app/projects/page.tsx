@@ -1,3 +1,5 @@
+"use client";
+
 import PROJECTS from '@/data/projects'
 import {AspectRatio} from '@/components/ui/aspect-ratio'
 

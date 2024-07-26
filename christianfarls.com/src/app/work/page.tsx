@@ -1,3 +1,5 @@
+"use client";
+
 import Experience from '@/components/sections/experience'
 import Skills from '@/components/sections/skills'
 import {SiX} from "@icons-pack/react-simple-icons";
