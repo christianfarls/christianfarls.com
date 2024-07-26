@@ -33,7 +33,23 @@ export default function TierList() {
                         </TableCell>
                         <TableCell className="flex-grow border-2 border-black dark:bg-gray-300 bg-gray-400">
                             <div className="flex flex-wrap gap-5">
-                                {tier.skills.map((skill, id) => {
+                                {tier.frontendSkills.map((skill, id) => {
+                                    return (
+                                        <TooltipProvider key={id}>
+                                            <Tooltip>
+                                                <TooltipTrigger asChild>
+                                                    <skill.icon className="h-8 w-8" title=""/>
+                                                </TooltipTrigger>
+                                                <TooltipContent>{skill.skill}</TooltipContent>
+                                            </Tooltip>
+                                        </TooltipProvider>
+                                    )
+                                })}
+                            </div>
+                        </TableCell>
+                        <TableCell className="flex-grow border-2 border-black dark:bg-gray-300 bg-gray-400">
+                            <div className="flex flex-wrap gap-5">
+                                {tier.backendSkills.map((skill, id) => {
                                     return (
                                         <TooltipProvider key={id}>
                                             <Tooltip>
