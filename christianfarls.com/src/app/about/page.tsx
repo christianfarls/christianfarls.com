@@ -1,8 +1,5 @@
 "use client";
 
-import Experience from '@/components/sections/experience'
-import Skills from '@/components/sections/skills'
-
 export default function About() {
     return (
         <div className="font-base">
@@ -10,16 +7,10 @@ export default function About() {
 
             <div className="mb-10 text-base sm:text-lg">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est
-                    consequatur, harum pariatur provident rerum placeat magni voluptas
-                    consectetur in exercitationem nobis aut, molestiae iure possimus
-                    aspernatur nesciunt laudantium ab atque.
+                    About me! Will be updated soon (literally tomorrow night, I gotta go to sleep I work in the
+                    morning).
                 </p>
             </div>
-
-            <Skills/>
-
-            <Experience/>
         </div>
     )
 }
