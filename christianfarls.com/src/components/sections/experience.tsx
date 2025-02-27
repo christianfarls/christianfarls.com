@@ -1,4 +1,4 @@
-import PAST_ROLES from '@/data/experience'
+import PAST_ROLES from './../../data/experience'
 
 export default function Experience() {
   return (

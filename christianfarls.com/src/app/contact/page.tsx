@@ -1,6 +1,7 @@
 "use client";
 
 import {SubmitHandler} from "react-hook-form";
+import {ContactForm} from "./contact-form";
 
 // Main Contact component
 export default function Contact() {
@@ -10,14 +11,9 @@ export default function Contact() {
     };
 
     return (
-        <div className="">
-            <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Contact</h1>
-            <p>You can reach me at +1 (412) 713-5531 or cfarls@nd.edu. Hope to chat soon!</p>
-            {/*
-            <div className="flex flex-col gap-5 items-center">
-                <ContactForm onSubmit={handleSubmit}/>
-            </div>
-            */}
-        </div>
+        <main className="max-w-md mx-auto py-10">
+            <h1 className="text-2xl font-bold mb-4">Contact Me</h1>
+            <ContactForm />
+        </main>
     );
 }

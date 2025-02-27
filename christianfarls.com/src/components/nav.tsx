@@ -9,26 +9,10 @@ export default function Nav() {
     const path = usePathname()
 
     const links = [
-        {
-            path: '/',
-            text: 'Home',
-        },
-        {
-            path: '/about',
-            text: 'About',
-        },
-        {
-            path: '/work',
-            text: 'Work',
-        },
-        {
-            path: '/notes',
-            text: 'Notes',
-        },
-        {
-            path: '/contact',
-            text: 'Contact',
-        },
+        { path: '/', text: 'Home' },
+        { path: '/work', text: 'Experience' },
+        { path: '/notes', text: 'Notes' },
+        { path: '/contact', text: 'Contact' },
     ]
 
     return (

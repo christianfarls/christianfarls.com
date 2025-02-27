@@ -20,7 +20,7 @@ export default function RootLayout({
         <ViewTransitions>
             <html lang="en">
             <body className={montserrat.className}>
-            <ThemeProvider attribute="class" disableTransitionOnChange>
+            <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
                 <Nav/>
                 <div className="text-text dark:text-darkText mx-auto w-[750px] max-w-full px-5 pb-10 pt-28">
                     {children}
