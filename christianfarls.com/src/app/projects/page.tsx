@@ -33,35 +33,37 @@ function ProjectCard({ project }: { project: Project }) {
                 />
             </AspectRatio>
             <div className="p-2">
-                <h2 className="text-xl font-heading sm:text-2xl">{project.name}</h2>
-                <p className="text-xs text-muted-foreground">{formattedDate}</p>
+                <h2 className="text-xl font-heading sm:text-2xl text-black">{project.name}</h2>
+                {/* Use a fixed text color instead of a dark variant */}
+                <p className="text-xs text-gray-800">{formattedDate}</p>
 
-                
+                {/* Display tags without dark mode variants */}
                 <div className="mt-2 flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
                         <span
                             key={index}
-                            className="rounded-full bg-gray-200 px-2 py-0.5 text-xs text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+                            className="rounded-full bg-gray-200 px-2 py-0.5 text-xs text-gray-800"
                         >
                             {tag}
                         </span>
                     ))}
                 </div>
-                
+
                 <button
-                    className="mt-2 flex items-center gap-1 text-sm font-bold"
+                    className="mt-2 flex items-center gap-1 text-sm font-bold text-black"
                     onClick={() => setShowDescription((prev) => !prev)}
                 >
                     <span>{showDescription ? "Hide Description" : "Read Description"}</span>
                     <span>{showDescription ? "↑" : "↓"}</span>
                 </button>
                 {showDescription && (
-                    <p className="mt-2 text-text text-sm">{project.description}</p>
+                    <p className="mt-2 text-sm text-gray-800">{project.description}</p>
                 )}
-                
+
+                {/* Buttons Container */}
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                     <a
-                        className="block text-center border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-white px-2 py-1 text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:hover:shadow-none"
+                        className="block text-center text-black border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-white px-2 py-1 text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
                         href={project.repoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -71,7 +73,7 @@ function ProjectCard({ project }: { project: Project }) {
 
                     {project.liveLink && (
                         <a
-                            className="block text-center border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-white px-2 py-1 text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:hover:shadow-none"
+                            className="block text-center text-black border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-white px-2 py-1 text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
                             href={project.liveLink}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -80,12 +82,10 @@ function ProjectCard({ project }: { project: Project }) {
                         </a>
                     )}
                 </div>
-                
             </div>
         </div>
     );
 }
-
 
 export default function Projects() {
     const [activeTag, setActiveTag] = useState("All");
