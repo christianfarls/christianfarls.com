@@ -7,24 +7,37 @@ const PAST_ROLES: {
 }[] = [
     {
         company: 'Mitsubishi Electric Power Products',
-        role: 'Software Engineer Intern',
+        role: 'Full Stack Software Engineer Intern',
         description:
-            'Redesigned key page layouts using React, enhancing user experience and consistency. Converted a data job ' +
-            'into on-demand services, improving responsiveness and data management. Integrated computer vision models, ' +
-            'contributing to advanced visual features. Gained experience in full stack development, including front-end, ' +
-            'back-end, database management, and machine learning integration.',
-        startDate: 'May 2023',
+            'Influenced clients to choose our service over competitors by redesigning the UI of a critical Inspection ' +
+            'module using React and TypeScript, adding a new feature that garnered positive feedback from a potential ' +
+            'customer during a demo. Improved user import accessibility and increased system performance by ' +
+            'reengineering the drone data import job into modular services in C#, adding on-demand flight data ' +
+            'retrieval and reducing local storage usage. Enhanced software functionality and contributed to a ' +
+            'successful new release by implementing valuable features from the backlog such as extracting location data ' +
+            'from imagery and plotting pins on a map.',
+        startDate: 'May 2024',
         endDate: 'August 2024',
+    },
+    {
+        company: 'Mitsubishi Electric Power Products',
+        role: 'Frontend Engineer Intern',
+        description:
+            'Developed a page to display hardware details--including device IP addresses, connection statuses, and logs' +
+            '--utilizing database information to offer essential insights on payloads used in inspection analysis. ' +
+            'Utilized Label Studio to annotate raw video, producing JSON datasets which were used to train a new ' +
+            'computer vision model for detecting and analyzing substation assets.',
+        startDate: 'May 2023',
+        endDate: 'August 2023',
     },
     {
         company: 'Notre Dame Center for Research Computing',
         role: 'Summer Research and Development Intern',
         description:
-            'Conducted in-depth research on various game development libraries to evaluate their compatibility and ' +
-            'performance for an upcoming project built in React, including testing several components to assess their ' +
-            'functionality and integration. Collaborated with a scrum team, gaining hands-on experience in agile ' +
-            'methodologies, including daily stand-ups, sprint planning, and retrospectives. ' +
-            'Enhanced understanding of the full game development lifecycle and agile project management principles.',
+            'Proactively self-taught React, TypeScript, HTML, and CSS to develop and evaluate chat functionalities of ' +
+            'a game engine library, contributing to the creation of a functional prototype. Collaborated with senior ' +
+            'developers to clarify project objectives, enhancing research effectiveness. Developed documentation and ' +
+            'presented findings to the team, facilitating informed decision-making for future development.',
         startDate: 'June 2022',
         endDate: 'August 2022',
     },

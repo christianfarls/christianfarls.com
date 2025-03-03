@@ -1,59 +1,62 @@
 "use client";
 
-import PROJECTS from '@/data/projects'
-import {AspectRatio} from '@/components/ui/aspect-ratio'
+import { useState } from "react";
+import PROJECTS from "../../data/projects";
+import { AspectRatio } from "../../components/ui/aspect-ratio";
+
+function ProjectCard({ project }) {
+    // Toggle state for showing/hiding the description
+    const [showDescription, setShowDescription] = useState(false);
+
+    return (
+        <div className="border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main overflow-hidden">
+            <AspectRatio ratio={1}>
+                <img
+                    className="object-cover w-full h-full"
+                    src={project.previewImage}
+                    alt={project.name}
+                />
+            </AspectRatio>
+            <div className="p-2">
+                <h2 className="text-xl font-heading sm:text-2xl">{project.name}</h2>
+
+                {/* Dropdown button to toggle description */}
+                <button
+                    className="mt-2 flex items-center gap-1 text-sm font-bold"
+                    onClick={() => setShowDescription((prev) => !prev)}
+                >
+                    <span>{showDescription ? "Hide Description" : "Read Description"}</span>
+                    <span>{showDescription ? "↑" : "↓"}</span>
+                </button>
+
+                {showDescription && (
+                    <p className="mt-2 text-text text-sm">{project.description}</p>
+                )}
+
+                <a
+                    className="mt-4 block text-center border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-white px-2 py-1 text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none dark:hover:shadow-none"
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Github
+                </a>
+            </div>
+        </div>
+    );
+}
 
 export default function Projects() {
     return (
         <div>
-            <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Contact</h1>
+            <h1 className="mb-8 text-2xl font-heading sm:text-4xl">Projects</h1>
 
-            <div className="flex flex-col gap-5">
-                {PROJECTS.map((project, id) => {
-                    return (
-                        <div
-                            className="border-border dark:border-darkBorder shadow-light dark:shadow-dark rounded-base border-2 bg-main p-4 sm:p-5"
-                            key={id}
-                        >
-                            <AspectRatio
-                                className="border-border dark:border-darkBorder shadow-light dark:shadow-dark !-bottom-[2px] rounded-base border-2"
-                                ratio={71 / 26}
-                            >
-                                <img
-                                    className="w-full rounded-base"
-                                    src={`${project.previewImage}`}
-                                    alt={project.name}
-                                />
-                            </AspectRatio>
-
-                            <div className="text-text mt-5 font-base">
-                                <h2 className="text-xl font-heading sm:text-2xl">
-                                    {project.name}
-                                </h2>
-
-                                <p className="mt-2">{project.description}</p>
-
-                                <div className="mt-8 grid grid-cols-2 gap-5">
-                                    <a
-                                        className="border-border dark:border-darkBorder shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                                        href={project.liveLink}
-                                        target="_blank"
-                                    >
-                                        Visit
-                                    </a>
-                                    <a
-                                        className="border-border dark:border-darkBorder shadow-light dark:shadow-dark cursor-pointer rounded-base border-2 bg-white px-4 py-2 text-center text-sm font-base transition-all hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none sm:text-base dark:hover:shadow-none"
-                                        href={project.repoUrl}
-                                        target="_blank"
-                                    >
-                                        Github
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })}
+            {/* Updated grid layout for fewer columns, making each container wider */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {PROJECTS.map((project, id) => (
+                    <ProjectCard key={id} project={project} />
+                ))}
             </div>
         </div>
-    )
+    );
 }

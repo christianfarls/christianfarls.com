@@ -52,8 +52,6 @@ export default function Home() {
             <Section>
                 <Contact/>
             </Section>
-
-            <Footer />
         </div>
     )
 }

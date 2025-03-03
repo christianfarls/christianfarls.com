@@ -10,9 +10,9 @@ export default function Nav() {
 
     const links = [
         { path: '/', text: 'Home' },
-        { path: '/work', text: 'Experience' },
+        { path: '/experience', text: 'Experience' },
+        { path: '/projects', text: 'Projects' },
         { path: '/notes', text: 'Notes' },
-        { path: '/contact', text: 'Contact' },
     ]
 
     return (
