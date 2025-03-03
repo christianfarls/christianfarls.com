@@ -3,7 +3,7 @@
 import About from "../app/about";
 import Section from "../components/section";
 import Footer from "../components/footer/footer";
-import Contact from "@/app/contact/page";
+import Contact from "../app/contact/page";
 
 export default function Home() {
     return (
